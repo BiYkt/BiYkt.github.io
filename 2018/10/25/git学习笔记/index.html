@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="安装git  设置用户名和邮箱12$ git config --global user.name&amp;quot;your name&amp;quot;$ git config --global user.email &amp;quot;email@example.com&amp;quot;   创建版本库 创建空目录 123$ mkgit learngit  //创建一个叫做learngit名字的空目录$ cd learng">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git学习笔记">
+<meta property="og:url" content="http://yoursite.com/2018/10/25/git学习笔记/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="安装git  设置用户名和邮箱12$ git config --global user.name&amp;quot;your name&amp;quot;$ git config --global user.email &amp;quot;email@example.com&amp;quot;   创建版本库 创建空目录 123$ mkgit learngit  //创建一个叫做learngit名字的空目录$ cd learng">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-10-25T11:04:24.124Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="git学习笔记">
+<meta name="twitter:description" content="安装git  设置用户名和邮箱12$ git config --global user.name&amp;quot;your name&amp;quot;$ git config --global user.email &amp;quot;email@example.com&amp;quot;   创建版本库 创建空目录 123$ mkgit learngit  //创建一个叫做learngit名字的空目录$ cd learng">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/10/25/git学习笔记/">
+
+
+
+
+
+  <title>git学习笔记 | Hexo</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hexo</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/25/git学习笔记/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">git学习笔记</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-10-25T19:03:00+08:00">
+                2018-10-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h2><hr>
+<ul>
+<li>设置用户名和邮箱<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name&quot;your name&quot;</span><br><span class="line">$ git config --global user.email &quot;email@example.com&quot;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="创建版本库"><a href="#创建版本库" class="headerlink" title="创建版本库"></a>创建版本库</h2><ul>
+<li><p>创建空目录</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ mkgit learngit  //创建一个叫做learngit名字的空目录</span><br><span class="line">$ cd learngit //进入目录</span><br><span class="line">$ pwd //显示当前目录所在的路径</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>用 <code>git init</code> 命令将创建的目录变成git可管理的仓库</p>
+</li>
+</ul>
+<h2 id="添加文件到版本库"><a href="#添加文件到版本库" class="headerlink" title="添加文件到版本库"></a>添加文件到版本库</h2><ul>
+<li><p>用 <code>git add</code> 命令告诉git，把文件添加到了仓库（<strong>实际上就是把文件修改添加到暂存区</strong>）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git add readme.txt  //添加了一个叫做readme的txt文件</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>用 <code>git commit</code> 命令告诉git，把文件提交到了版本库（<strong>实际上就是把暂存区的所有内容提交到当前分支</strong>）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git commit -m&quot;wrote a readme file&quot; // -m后面输入对本次提交的说明</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>git commit</code> 成功以后会告诉你， <code>1 file change</code> ：一个文件被改动； <code>2 insertions</code> ：插入了两行内容(readme.txt有两行内容)</p>
+</li>
+<li><p><code>git status</code> 命令可以时刻掌握仓库当前的状态</p>
+</li>
+<li><code>git diff &lt;file name&gt;</code> 可以查看具体修改了什么内容 </li>
+</ul>
+<h4 id="每次对文件修改以后都要用git-add-提交到仓库，用-git-commit-提交改动说明"><a href="#每次对文件修改以后都要用git-add-提交到仓库，用-git-commit-提交改动说明" class="headerlink" title="每次对文件修改以后都要用git add 提交到仓库，用 git commit 提交改动说明"></a>每次对文件修改以后都要用<code>git add</code> 提交到仓库，用 <code>git commit</code> 提交改动说明</h4><hr>
+<h2 id="版本回退"><a href="#版本回退" class="headerlink" title="版本回退"></a>版本回退</h2><ul>
+<li><code>git log</code> 命令可以查看文件修改<strong>提交的历史纪录</strong>，显示的是从<strong>最近到最远</strong>的提交日志，加上 <code>--pretty=oneline</code> 参数可以缩减显示内容，输出内容是版本号以及 <code>git commit</code> 中的内容， <code>HEAD</code> 表示当前版本，上一版本为 <code>HEAD^</code> 上上版本为 <code>HEAD^^</code> 上100版本为 <code>HEAD~100</code>  </li>
+<li><code>git reset --hard HEAD^</code> 为回退到HEAD的上一版本，用 <code>git reset</code> 命令来回退版本，回退后文件的修改会回到之前版本</li>
+<li><code>git reflog</code> 命令可以记录你的每一次命令<strong>查看命令历史</strong>，如果<strong>不小心回退错</strong>了可以先用 <code>git reflog</code> 查看版本号，然后用 <code>git reset --hard + 空格 + 版本号</code> 来回退</li>
+<li><code>git add</code> 提交的东西会放到暂存区，再由 <code>git commit</code> 提交到仓库中。</li>
+</ul>
+<h2 id="撤销修改"><a href="#撤销修改" class="headerlink" title="撤销修改"></a>撤销修改</h2><ul>
+<li>当你<strong>改乱了工作区某个文件</strong>的内容，想直接丢弃工作区的修改时，用命令 <code>git checkout -- file</code>。</li>
+<li>当你不但改乱了工作区某个文件的内容，还<strong>添加到了暂存区</strong>时，想丢弃修改，分两步，第一步用命令 <code>git reset HEAD &lt;file&gt;</code> ，就回到了第一条，第二步按第一条操作。</li>
+<li>已经<strong>提交了</strong>不合适的修改<strong>到版本库</strong>时，想要撤销本次提交，参考版本回退一节，不过前提是没有推送到远程库。</li>
+</ul>
+<h2 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h2><ul>
+<li>设置本地git仓库和github仓库</li>
+</ul>
+<ol>
+<li><p>创建 <code>SSH Key</code> : 在<strong>用户主目录</strong>下查看有没有 <code>.ssh</code> 目录，打开看看有没有 <code>id_rsa</code> (私钥，不可泄露）和 <code>id_rsa.pub</code>（公钥） 文件，没有则创建 <code>SSH Key</code> </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C&quot;youremail@example.com&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在GitHub的 <code>Account setting</code>,<code>SSH Key</code>页面点击<code>Add SSH Key</code> 填上任意Title 在Key的文本框中粘贴 <code>id_rsa.pub</code> 中的内容</p>
+</li>
+</ol>
+<ul>
+<li><strong>添加远程库</strong></li>
+</ul>
+<ol>
+<li>登陆GitHub， <code>Create a new repo</code> 创建新仓库</li>
+<li><p>在本地要同步的仓库下运行命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git remote add origin git@github.com:yourgithubname/cangkuname.git</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>首次</strong>将本地库的内容推送到远程库</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git push -u origin master// 把当前分支master推送到远程</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p><strong>非首次</strong>推送<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git push origin master</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li><strong>从远程库克隆</strong></li>
+</ul>
+<ol>
+<li>登陆GitHub创建新仓库，勾选<code>Initialize this repository with a README</code> (自动创建了README.md文件)</li>
+<li>用命令克隆一个本地库<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git clone git@github.com:yourgithubname/cangkuname.git</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="创建与合并分支"><a href="#创建与合并分支" class="headerlink" title="创建与合并分支"></a>创建与合并分支</h2><ul>
+<li><p>创建并切换dev分支</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout -b dev// -b表示创建并切换分支</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>创建分支与切换分支分开进行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git branch dev</span><br><span class="line">$ git checkout dev</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>用 <code>git branch</code> 命令查看当前分支，当前分支前面会标一个 <strong><code>*</code></strong> </p>
+</li>
+<li><p><code>dev</code> 分支的工作完成以后切换回 <code>master</code> 分支</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout master</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>dev</code> 分支的工作成果合并到 <code>master</code> 分支上</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git merge dev//用于合并指定分支（dev）到当前分支</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>合并完成后可删除 <code>dev</code> </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git branch -d dev</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用 <code>git log --graph</code> 也可以看到分支合并情况</p>
+</li>
+<li>合并分支时，加上<code>--no-ff</code>参数就可以用普通模式合并，合并后的历史有分支，能看出来曾经做过合并，而<code>fast forward</code>合并就看不出来曾经做过合并。<br>-如果要丢弃一个没有被合并过的分支，可以通过 <code>git branch -D &lt;name&gt;</code> 强行删除。</li>
+</ul>
+<h2 id="储存工作区内容"><a href="#储存工作区内容" class="headerlink" title="储存工作区内容"></a>储存工作区内容</h2><ul>
+<li><code>git stash</code> 命令储存工作区内容</li>
+<li><code>git stash pop</code>恢复分支的同时把stash的内容也删除了</li>
+<li><code>git stash list</code> 命令可以查看有几个stash的分支</li>
+</ul>
+<h2 id="创建标签"><a href="#创建标签" class="headerlink" title="创建标签"></a>创建标签</h2><ul>
+<li>命令 <code>git tag &lt;tagname&gt;</code> 用于新建一个标签，默认为<code>HEAD</code>，也可以指定一个<code>commit id</code></li>
+<li><p>命令 <code>git tag -a &lt;tagname&gt; -m &quot;blablabla...&quot;</code> 可以指定标签信息；</p>
+</li>
+<li><p>命令 <code>git tag</code> 可以查看所有标签。</p>
+</li>
+</ul>
+<h2 id="操作标签"><a href="#操作标签" class="headerlink" title="操作标签"></a>操作标签</h2><ul>
+<li><p>命令<code>git push origin &lt;tagname&gt;</code>可以推送一个本地标签；</p>
+</li>
+<li><p>命令<code>git push origin --tags</code>可以推送全部未推送过的本地标签；</p>
+</li>
+<li><p>命令<code>git tag -d &lt;tagname&gt;</code>可以删除一个本地标签；</p>
+</li>
+<li><p>命令<code>git push origin :refs/tags/&lt;tagname&gt;</code>可以删除一个远程标签。</p>
+</li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/10/25/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">John Doe</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装git"><span class="nav-number">1.</span> <span class="nav-text">安装git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建版本库"><span class="nav-number">2.</span> <span class="nav-text">创建版本库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加文件到版本库"><span class="nav-number">3.</span> <span class="nav-text">添加文件到版本库</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#每次对文件修改以后都要用git-add-提交到仓库，用-git-commit-提交改动说明"><span class="nav-number">3.0.1.</span> <span class="nav-text">每次对文件修改以后都要用git add 提交到仓库，用 git commit 提交改动说明</span></a></li></ol></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#版本回退"><span class="nav-number">4.</span> <span class="nav-text">版本回退</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#撤销修改"><span class="nav-number">5.</span> <span class="nav-text">撤销修改</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#远程仓库"><span class="nav-number">6.</span> <span class="nav-text">远程仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建与合并分支"><span class="nav-number">7.</span> <span class="nav-text">创建与合并分支</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#储存工作区内容"><span class="nav-number">8.</span> <span class="nav-text">储存工作区内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建标签"><span class="nav-number">9.</span> <span class="nav-text">创建标签</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#操作标签"><span class="nav-number">10.</span> <span class="nav-text">操作标签</span></a></li></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
