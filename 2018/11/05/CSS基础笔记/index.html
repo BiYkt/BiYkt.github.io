@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="BiYkt">
 <meta property="og:description" content="color：改变字体的颜色（链接的颜色不会变） font-family：改变字体 ，可以指定多个字体，会从第一个字体开始检查有没有这个字体，最后一个字体要指定为一个通用字体，若要使用web字体则使用@font-face规则 border-bottom：控制元素下边框的外观 underline：给文本加加下划线（下划线只出现在文本下面） font-weight：控制文本的粗细，可以用来设置粗体，用">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-05T13:58:32.954Z">
+<meta property="og:updated_time" content="2018-11-06T08:03:21.752Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS基础笔记">
 <meta name="twitter:description" content="color：改变字体的颜色（链接的颜色不会变） font-family：改变字体 ，可以指定多个字体，会从第一个字体开始检查有没有这个字体，最后一个字体要指定为一个通用字体，若要使用web字体则使用@font-face规则 border-bottom：控制元素下边框的外观 underline：给文本加加下划线（下划线只出现在文本下面） font-weight：控制文本的粗细，可以用来设置粗体，用">
@@ -324,7 +324,7 @@
 <li><p><code>margin</code>：设置外边距,可以使用：</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">padding</span>：0<span class="selector-tag">px</span>（上） 20<span class="selector-tag">px</span>（右） 30<span class="selector-tag">px</span>（下） 10<span class="selector-tag">px</span>（左）</span><br></pre></td></tr></table></figure>
 </li>
-<li><p><code>font-size</code>：让文本更大或者更小，可以用<code>px</code>（像素，不建议使用）<code>em</code>（比例）百分数 关键字指定，一般先在<code>body</code>规则中使用字体大小关键字来设置基本字体大小，然后其他元素用百分数或者em来指定相对于body元素的大小<br><code>background-image</code>：在元素后面放置一个图像, <strong>图像会默认平铺在元素的背</strong>）</p>
+<li><p><code>font-size</code>：让文本更大或者更小，可以用<code>px</code>（像素，不建议使用）<code>em</code>（比例）百分数 关键字指定，一般先在<code>body</code>规则中使用字体大小关键字来设置基本字体大小，然后其他元素用百分数或者em来指定相对于body元素的大小<br><code>background-image</code>：在元素后面放置一个图像, <strong>图像会默认平铺在元素的背景</strong></p>
 </li>
 <li><code>background-repeat</code>：包括<code>no-repeat</code>（图像只显示一次，根本不重复）<code>repeat-x</code>（图像只在水平方        向重复）<code>repeat-y</code>（图像只在垂直方向上重复）<code>inherit</code>（按照父元素的设置来处理）</li>
 <li><code>background-position</code>：调整图像的位置</li>
@@ -370,7 +370,7 @@
 <li>类名要以一个字母开头，id名可以以一个数字或者字母开头，id名和类名都可以包含字母，数字以及<code>_</code> 字符，但是都不可以包括一个空格，id必须是唯一的</li>
 <li>一个块元素的默认宽度<code>为auto</code>，这说明它会延伸占满可用的空间</li>
 <li>一般不指定元素的高度，若指定的高度不够大，内容底部可能会溢出到下一个元素。</li>
-<li>层叠问题：按作者 读者 浏览器的顺序来层叠，作者最重要，但如果读者在css属性上加上 <code>！important</code> 排序时这些属性最为优先，会覆盖作者的样式。<strong>*计算特定性</strong>：000为起始，选择器包括id则第一个0加1，包括一个类或者伪类第二个0加1，包含一个元素名第三个0加1</li>
+<li>层叠问题：按作者 读者 浏览器的顺序来层叠，作者最重要，但如果读者在css属性上加上 <code>！important</code> 排序时这些属性最为优先，会覆盖作者的样式。<strong>计算特定性</strong>：000为起始，选择器包括id则第一个0加1，包括一个类或者伪类第二个0加1，包含一个元素名第三个0加1</li>
 <li>创建逻辑区有助于标识主内容区以及页面的页眉和页脚</li>
 <li>流就是浏览器在页面上摆放html元素所用的方法，块元素从上向下流，内联元素从左上方流向右下方</li>
 <li>浏览器并排摆放两个内联元素时，它会在这些元素之间创建足够的外边距，外边距不会折叠<br>浏览器上下放置两个块元素时，它会把它们共同的外边距折叠在一起，显示出外边距大的那个元素的外边距（只要两个垂直外边距碰到一起的时候就会发生折叠）</li>
@@ -415,8 +415,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/11/05/测试小格子/" rel="prev" title="test">
-                test <i class="fa fa-chevron-right"></i>
+              <a href="/2018/11/06/数据库基本步骤学习笔记/" rel="prev" title="数据库基本步骤学习笔记">
+                数据库基本步骤学习笔记 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -509,7 +509,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

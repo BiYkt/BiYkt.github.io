@@ -239,7 +239,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/05/测试小格子/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/06/数据库基本步骤学习笔记/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="BiYkt">
@@ -258,7 +258,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/11/05/测试小格子/" itemprop="url">test</a></h1>
+                <a class="post-title-link" href="/2018/11/06/数据库基本步骤学习笔记/" itemprop="url">数据库基本步骤学习笔记</a></h1>
         
 
         <div class="post-meta">
@@ -270,8 +270,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-05T22:07:32+08:00">
-                2018-11-05
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-06T16:36:41+08:00">
+                2018-11-06
               </time>
             
 
@@ -309,12 +309,17 @@
 
       
         
-          
-          测试小格子
-          
+          <ol>
+<li><p>加载数据库驱动</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Class.forName(driverClass); </span><br><span class="line"><span class="comment">//driverClass对应jar包中Driver类所在的位置</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>通过<code>DriverManager</code>获取数据库连接</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">DriverManager.getConnection(String url, String user, String password);</span><br><span class="line"><span class="comment">//对应的是数据库URL，登陆数据库的用户名，密码</span></span><br><span class="line"><span class="comment">//URL有固定写法</span></span><br><span class="line">jdbc:mysql:<span class="comment">//hostname:port/databasename</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/11/05/测试小格子/#more" rel="contents">
+            <a class="btn" href="/2018/11/06/数据库基本步骤学习笔记/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1186,7 +1191,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="-JDBC -数据库,">
 
 
 
@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="测试小格子">
+<meta name="description" content="加载数据库驱动 12Class.forName(driverClass); //driverClass对应jar包中Driver类所在的位置  通过DriverManager获取数据库连接 1234DriverManager.getConnection(String url, String user, String password);//对应的是数据库URL，登陆数据库的用户名，密码//URL">
+<meta name="keywords" content="-JDBC -数据库">
 <meta property="og:type" content="article">
-<meta property="og:title" content="test">
-<meta property="og:url" content="http://yoursite.com/2018/11/05/测试小格子/index.html">
+<meta property="og:title" content="数据库基本步骤学习笔记">
+<meta property="og:url" content="http://yoursite.com/2018/11/06/数据库基本步骤学习笔记/index.html">
 <meta property="og:site_name" content="BiYkt">
-<meta property="og:description" content="测试小格子">
+<meta property="og:description" content="加载数据库驱动 12Class.forName(driverClass); //driverClass对应jar包中Driver类所在的位置  通过DriverManager获取数据库连接 1234DriverManager.getConnection(String url, String user, String password);//对应的是数据库URL，登陆数据库的用户名，密码//URL">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-05T14:07:11.227Z">
+<meta property="og:updated_time" content="2018-11-06T08:36:26.685Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="test">
-<meta name="twitter:description" content="测试小格子">
+<meta name="twitter:title" content="数据库基本步骤学习笔记">
+<meta name="twitter:description" content="加载数据库驱动 12Class.forName(driverClass); //driverClass对应jar包中Driver类所在的位置  通过DriverManager获取数据库连接 1234DriverManager.getConnection(String url, String user, String password);//对应的是数据库URL，登陆数据库的用户名，密码//URL">
 
 
 
@@ -119,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/11/05/测试小格子/">
+  <link rel="canonical" href="http://yoursite.com/2018/11/06/数据库基本步骤学习笔记/">
 
 
 
 
 
-  <title>test | BiYkt</title>
+  <title>数据库基本步骤学习笔记 | BiYkt</title>
   
 
 
@@ -242,7 +243,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/05/测试小格子/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/06/数据库基本步骤学习笔记/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="BiYkt">
@@ -259,7 +260,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">test</h1>
+          <h1 class="post-title" itemprop="name headline">数据库基本步骤学习笔记</h1>
         
 
         <div class="post-meta">
@@ -271,8 +272,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-05T22:07:32+08:00">
-                2018-11-05
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-06T16:36:41+08:00">
+                2018-11-06
               </time>
             
 
@@ -309,7 +310,37 @@
       
 
       
-        <h3 id="测试小格子"><a href="#测试小格子" class="headerlink" title="测试小格子"></a>测试小格子</h3>
+        <ol>
+<li><p>加载数据库驱动</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Class.forName(driverClass); </span><br><span class="line"><span class="comment">//driverClass对应jar包中Driver类所在的位置</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>通过<code>DriverManager</code>获取数据库连接</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">DriverManager.getConnection(String url, String user, String password);</span><br><span class="line"><span class="comment">//对应的是数据库URL，登陆数据库的用户名，密码</span></span><br><span class="line"><span class="comment">//URL有固定写法</span></span><br><span class="line">jdbc:mysql:<span class="comment">//hostname:port/databasename</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<a id="more"></a>
+<p>程序中如果多处需要与数据库获得链接，则可以写一个<code>BaseConnection</code>类，在其他类中与数据库链接只需要直接调用 <code>Connection conn = BaseConnection.getConnection();</code><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">package</span> com.xxx.www.util;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">import</span> java.sql.Connection;</span><br><span class="line"><span class="keyword">import</span> java.sql.DriverManager;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BaseConnection</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Connection <span class="title">getConnection</span><span class="params">()</span></span>&#123;</span><br><span class="line">		Connection conn = <span class="keyword">null</span>;</span><br><span class="line">		<span class="keyword">try</span> &#123;</span><br><span class="line">			Class.forName(<span class="string">"com.mysql.jdbc.Driver"</span>); <span class="comment">//加载数据库驱动</span></span><br><span class="line">			conn = DriverManager.getConnection(<span class="string">"jdbc:mysql://localhost:3306"</span>,<span class="string">"root"</span>,<span class="string">"password"</span> ); <span class="comment">//获取数据库连接对象</span></span><br><span class="line">		&#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">			e.printStackTrace();</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> conn;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure></p>
+<ol start="3">
+<li>通过<code>Connection</code>对象创建<code>Statement</code>对象<br> 方法如下：</li>
+</ol>
+<ul>
+<li><code>createStatement()</code>: 创建基本的<code>Statement</code>对象</li>
+<li><code>prepareStatement(sql)</code>:  根据传入的SQL语句创建<strong>预编译</strong>的<code>Statement</code>对象</li>
+<li><code>prepareCall</code>: 根据传入的SQL语句创建<code>CallableStatement</code>对象</li>
+</ul>
+<ol start="4">
+<li>使用<code>Statement</code>执行SQL语句<br><br>方法如下：</li>
+</ol>
+<ul>
+<li><code>execute()</code>: 可以执行任何SQL语句但比较麻烦</li>
+<li><code>executeUpdate()</code>: 主要用于执行DML和DDL语句，执行DML语句返回受SQL语句影响的行数，执行DDL语句返回0</li>
+<li><code>executeQuery()</code>: 只能执行查询语句</li>
+</ul>
+<ol start="5">
+<li>操作结果集。如果执行的SQL语句是查询语句，执行结果会返回一个<code>ResultSer</code>对象，该对象普遍用的方法为<code>next()</code>方法，意思是在遍历的过程中如果没有下一个结果了则方法会返回空值，也经常使用<code>getXxx()</code>方法</li>
+<li>回收数据库资源</li>
+</ol>
+
       
     </div>
     
@@ -323,6 +354,12 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JDBC-数据库/" rel="tag"># -JDBC -数据库</a>
+          
+        </div>
       
 
       
@@ -393,17 +430,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -433,7 +461,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -456,22 +484,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#测试小格子"><span class="nav-number">1.</span> <span class="nav-text">测试小格子</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
