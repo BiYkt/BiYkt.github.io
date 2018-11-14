@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="JavaWeb,">
 
 
 
@@ -79,13 +79,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="BiYkt">
-<meta property="og:url" content="http://yoursite.com/tags/正则/index.html">
+<meta name="description" content="Servlet的使用步骤 创建普通的Java类并继承HttpServlet 覆写service方法 在service方法中写逻辑代码 在webRoot下的WEB-INF文件夹下的web.xml文件中配置servlet">
+<meta name="keywords" content="JavaWeb">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaWeb学习笔记(二)">
+<meta property="og:url" content="http://yoursite.com/2018/11/14/JavaWeb学习笔记(二)/index.html">
 <meta property="og:site_name" content="BiYkt">
+<meta property="og:description" content="Servlet的使用步骤 创建普通的Java类并继承HttpServlet 覆写service方法 在service方法中写逻辑代码 在webRoot下的WEB-INF文件夹下的web.xml文件中配置servlet">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-11-14T10:33:37.284Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="BiYkt">
+<meta name="twitter:title" content="JavaWeb学习笔记(二)">
+<meta name="twitter:description" content="Servlet的使用步骤 创建普通的Java类并继承HttpServlet 覆写service方法 在service方法中写逻辑代码 在webRoot下的WEB-INF文件夹下的web.xml文件中配置servlet">
 
 
 
@@ -115,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/正则/">
+  <link rel="canonical" href="http://yoursite.com/2018/11/14/JavaWeb学习笔记(二)/">
 
 
 
 
 
-  <title>标签: 正则 | BiYkt</title>
+  <title>JavaWeb学习笔记(二) | BiYkt</title>
   
 
 
@@ -140,7 +145,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -224,52 +229,161 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>正则<small>标签</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/14/JavaWeb学习笔记(二)/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="BiYkt">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/header.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BiYkt">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/10/29/正则学习笔记/" itemprop="url">
-              
-                <span itemprop="name">正则学习笔记</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">JavaWeb学习笔记(二)</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-10-29T22:24:15+08:00" content="2018-10-29">
-          10-29
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-14T18:33:51+08:00">
+                2018-11-14
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+			
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="Servlet的使用步骤"><a href="#Servlet的使用步骤" class="headerlink" title="Servlet的使用步骤"></a>Servlet的使用步骤</h2><ol>
+<li>创建普通的Java类并继承<code>HttpServlet</code></li>
+<li>覆写<code>service</code>方法</li>
+<li>在<code>service</code>方法中写逻辑代码</li>
+<li>在<code>webRoot</code>下的<code>WEB-INF</code>文件夹下的<code>web.xml</code>文件中配置<code>servlet</code></li>
+</ol>
+<a id="more"></a>
+<h2 id="Servlet生命周期"><a href="#Servlet生命周期" class="headerlink" title="Servlet生命周期"></a>Servlet生命周期</h2><p>从第一次被调用时到服务器关闭的时候，若<code>在web.xml</code>中配置了<code>load-on-startup</code>生命周期则从服务器启动到关闭时</p>
+<h2 id="Servlet基本方法"><a href="#Servlet基本方法" class="headerlink" title="Servlet基本方法"></a>Servlet基本方法</h2><ul>
+<li><code>init()</code>方法时对Servlet进行初始化的一个方法，在Servlet第一次加载进内存时执行</li>
+<li><code>destroy()</code>方法在Servlet被销毁即服务器关闭时执行</li>
+<li><code>service()</code>方法可以处理<code>get</code>和<code>post</code>方式的请求，如果servlet中又service方法，会<strong>优先调用</strong><code>service</code>方法对请求进行处理</li>
+<li><code>doGet()</code>方法处理get方法的请求</li>
+<li><code>doPost()</code>方法处理post方法的请求<h5 id="注意：如果在覆写的service方法中调用了父类的service-即super-service-arg0-arg1-则service方法处理完后会再次根据请求方式调用doGet或者doPost方法，所以一般不在覆写的service方法中调用父类的service"><a href="#注意：如果在覆写的service方法中调用了父类的service-即super-service-arg0-arg1-则service方法处理完后会再次根据请求方式调用doGet或者doPost方法，所以一般不在覆写的service方法中调用父类的service" class="headerlink" title="注意：如果在覆写的service方法中调用了父类的service,即super.service(arg0,arg1)则service方法处理完后会再次根据请求方式调用doGet或者doPost方法，所以一般不在覆写的service方法中调用父类的service"></a>注意：如果在覆写的service方法中调用了父类的service,即<code>super.service(arg0,arg1)</code>则service方法处理完后会再次根据请求方式调用doGet或者doPost方法，所以一般不在覆写的service方法中调用父类的service</h5></li>
+</ul>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JavaWeb/" rel="tag"># JavaWeb</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/11/13/JavaWeb学习笔记(一)/" rel="next" title="JavaWeb(一)">
+                <i class="fa fa-chevron-left"></i> JavaWeb(一)
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -277,6 +391,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -297,8 +415,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -351,6 +478,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Servlet的使用步骤"><span class="nav-number">1.</span> <span class="nav-text">Servlet的使用步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Servlet生命周期"><span class="nav-number">2.</span> <span class="nav-text">Servlet生命周期</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Servlet基本方法"><span class="nav-number">3.</span> <span class="nav-text">Servlet基本方法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#注意：如果在覆写的service方法中调用了父类的service-即super-service-arg0-arg1-则service方法处理完后会再次根据请求方式调用doGet或者doPost方法，所以一般不在覆写的service方法中调用父类的service"><span class="nav-number">3.0.0.1.</span> <span class="nav-text">注意：如果在覆写的service方法中调用了父类的service,即super.service(arg0,arg1)则service方法处理完后会再次根据请求方式调用doGet或者doPost方法，所以一般不在覆写的service方法中调用父类的service</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -507,6 +650,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
