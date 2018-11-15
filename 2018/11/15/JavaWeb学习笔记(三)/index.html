@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="BiYkt">
 <meta property="og:description" content="request对象 介绍： request对象由Tomcat服务器创建，并作为实参传递给处理请求的servlet的service方法，request对象包含了请求数据。 作用：request对象中封存了当前请求的所有请求信息。 使用：  获取请求头数据 1234req.getMethod(); //获取请求方式req.getRequestURL(); //获取请求URL信息req.getReque">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-15T11:38:37.466Z">
+<meta property="og:updated_time" content="2018-11-15T11:53:49.973Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaWeb学习笔记(三)">
 <meta name="twitter:description" content="request对象 介绍： request对象由Tomcat服务器创建，并作为实参传递给处理请求的servlet的service方法，request对象包含了请求数据。 作用：request对象中封存了当前请求的所有请求信息。 使用：  获取请求头数据 1234req.getMethod(); //获取请求方式req.getRequestURL(); //获取请求URL信息req.getReque">
@@ -317,7 +317,7 @@
 <ol>
 <li><p>获取请求头数据</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">req.getMethod(); <span class="comment">//获取请求方式</span></span><br><span class="line">req.getRequestURL(); <span class="comment">//获取请求URL信息</span></span><br><span class="line">req.getRequestURI(); <span class="comment">//获取请求URI信息</span></span><br><span class="line">req.getScheme(); <span class="comment">//获取协议</span></span><br></pre></td></tr></table></figure>
-</li>
+<a id="more"></a></li>
 <li><p>获取请求行数据</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">req.getHeader(<span class="string">"键名"</span>); <span class="comment">//返回指定的请求头信息</span></span><br><span class="line">req.getHeaderNames(); <span class="comment">//返回请求头的键名枚举集合</span></span><br></pre></td></tr></table></figure>
 </li>

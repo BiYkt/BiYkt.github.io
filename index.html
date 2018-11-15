@@ -309,15 +309,13 @@
 
       
         
-          
-          request对象
-介绍： request对象由Tomcat服务器创建，并作为实参传递给处理请求的servlet的service方法，request对象包含了请求数据。
-作用：request对象中封存了当前请求的所有请求信息。
-使用：
-
-获取请求头数据
-1234req.getMethod(); //
-          ...
+          <h2 id="request对象"><a href="#request对象" class="headerlink" title="request对象"></a>request对象</h2><ul>
+<li>介绍： <code>request对象</code>由Tomcat服务器创建，并作为实参传递给处理请求的<code>servlet</code>的<code>service</code>方法，<code>request</code>对象包含了请求数据。</li>
+<li>作用：<code>request对象</code>中封存了当前请求的所有请求信息。</li>
+<li><p>使用：</p>
+<ol>
+<li><p>获取请求头数据</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">req.getMethod(); <span class="comment">//获取请求方式</span></span><br><span class="line">req.getRequestURL(); <span class="comment">//获取请求URL信息</span></span><br><span class="line">req.getRequestURI(); <span class="comment">//获取请求URI信息</span></span><br><span class="line">req.getScheme(); <span class="comment">//获取协议</span></span><br></pre></td></tr></table></figure>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/11/15/JavaWeb学习笔记(三)/#more" rel="contents">
@@ -327,7 +325,7 @@
           <!--/noindex-->
         
       
-    </div>
+    </li></ol></li></ul></div>
     
     
     
